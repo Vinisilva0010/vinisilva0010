@@ -1,6 +1,6 @@
 # 👩🏻‍💻 Vinicius Pontual
 **`Cientista de Dados`**
-**`Desenvolvedora FullStack`**
+**`Desenvolvedor FullStack`**
 
 Sou estudante de Ciências da Computação no quarto semestre, com um 
 interesse profundo por ciências de dados e programação. Durante meu curso, 
