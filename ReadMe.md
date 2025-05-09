@@ -1,4 +1,4 @@
-# 👩🏻‍💻 Vinicius Pontual
+#  Vinicius Pontual
 **`Cientista de Dados`**
 **`Desenvolvedor FullStack`**
 
