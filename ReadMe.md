@@ -23,5 +23,4 @@ Currently, I'm building **[Zanvexis](https://www.zanvexis.com)** — an AI Opera
 
 ### 📫 Connect with me
 * **Website:** [zanvexis.com](https://www.zanvexis.com)
-* **LinkedIn:** [Seu Link Aqui]
-* **X / Twitter:** [Seu Link Aqui]
+
