@@ -1,0 +1,129 @@
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+	<foreignObject width="100%" height="100%">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<style>
+				@keyframes pulse {
+					0%, 100% { opacity: 1; transform: scale(1); }
+					50% { opacity: 0.8; transform: scale(1.05); }
+				}
+				@keyframes flow {
+					0% { stroke-dashoffset: 1000; }
+					100% { stroke-dashoffset: 0; }
+				}
+				@keyframes float {
+					0%, 100% { transform: translateY(0px); }
+					50% { transform: translateY(-10px); }
+				}
+				@keyframes glitch {
+					0% { transform: translate(0); }
+					20% { transform: translate(-2px, 2px); }
+					40% { transform: translate(-2px, -2px); }
+					60% { transform: translate(2px, 2px); }
+					80% { transform: translate(2px, -2px); }
+					100% { transform: translate(0); }
+				}
+				.container {
+					background: #0a0a0a;
+					width: 100%;
+					height: 400px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-family: 'Courier New', monospace;
+					position: relative;
+					overflow: hidden;
+					border-radius: 12px;
+					border: 2px solid #333;
+				}
+				.grid-bg {
+					position: absolute;
+					inset: 0;
+					background-image: linear-gradient(to right, #1a1a1a 1px, transparent 1px), linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+					background-size: 30px 30px;
+					z-index: 0;
+				}
+				.content {
+					z-index: 2;
+					text-align: center;
+				}
+				h1 {
+					color: #fff;
+					font-size: 40px;
+					margin-bottom: 10px;
+					text-transform: uppercase;
+					letter-spacing: 2px;
+				}
+				.highlight {
+					color: #ff8800;
+					font-weight: bold;
+					animation: pulse 2s infinite ease-in-out;
+				}
+				.role {
+					color: #00ff99;
+					font-size: 20px;
+					margin-bottom: 30px;
+				}
+				.systems {
+					display: flex;
+					gap: 30px;
+					justify-content: center;
+					margin-top: 40px;
+				}
+				.system-box {
+					background: rgba(255,255,255,0.05);
+					padding: 15px 25px;
+					border-radius: 8px;
+					border: 1px solid #333;
+					color: #fff;
+					text-align: center;
+					position: relative;
+					animation: float 3s infinite ease-in-out;
+				}
+				.system-box:nth-child(2) { animation-delay: 0.5s; border-color: #ff8800; box-shadow: 0 0 15px rgba(255,136,0,0.3); }
+				.system-box:nth-child(1) { animation-delay: 1s; border-color: #ff3300; box-shadow: 0 0 15px rgba(255,51,0,0.3); }
+				.system-box:nth-child(3) { animation-delay: 1.5s; border-color: #00ccff; box-shadow: 0 0 15px rgba(0,204,255,0.3); }
+				
+				.icon { font-size: 24px; margin-bottom: 10px; display: block; }
+				.label { font-size: 14px; font-weight: bold; }
+				.sublabel { font-size: 10px; color: #aaa; }
+
+				.zanvexis-core {
+					position: absolute;
+					bottom: 20px;
+					width: 100%;
+					text-align: center;
+					color: #ff8800;
+					font-size: 14px;
+					letter-spacing: 4px;
+					animation: glitch 3s infinite;
+				}
+			</style>
+			<div class="container">
+				<div class="grid-bg"></div>
+				<div class="content">
+					<h1>Hi, I'm <span class="highlight">Vinicius</span></h1>
+					<div class="role">> The Full-stack Architect & Founder</div>
+					
+					<div class="systems">
+						<div class="system-box">
+							<span class="icon">🛡️🦀</span>
+							<div class="label">RUST CORE</div>
+							<div class="sublabel">Security & Databases</div>
+						</div>
+						<div class="system-box" style="transform: scale(1.1);">
+							<span class="icon">🧠🚀</span>
+							<div class="label">ZANVEXIS AI OS</div>
+							<div class="sublabel">The Masterpiece</div>
+						</div>
+						<div class="system-box">
+							<span class="icon">⛓️🎮</span>
+							<div class="label">WEB3 & SUPER UIs</div>
+							<div class="sublabel">DeFi, dApps & Animations</div>
+						</div>
+					</div>
+				</div>
+				<div class="zanvexis-core">BUILDING THE FUTURE OS</div>
+			</div>
+		</div>
+	</foreignObject>
+</svg>
