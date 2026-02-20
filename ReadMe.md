@@ -11,7 +11,7 @@
     Não apenas escrevo código; eu construo ecossistemas digitais seguros, rápidos e visualmente impactantes. Minha paixão é unir a robustez do baixo nível com a beleza de interfaces "super sites".
   </p>
 
-  <a href="https://vinicius-developer.vercel.app/">
+  <a href="https://vinicius.zanvexis.com/">
     <img src="https://img.shields.io/badge/PORTFÓLIO-VISITAR-ff8800?style=for-the-badge&logo=framer" alt="Portfolio" />
   </a>
   <a href="https://www.zanvexis.com">
@@ -77,7 +77,7 @@ Estou consolidando todo o meu conhecimento para construir o **Zanvexis** — Um 
 
 <div align="center">
   ### 📫 Vamos Conectar
-  <a href="https://www.zanvexis.com">
+  <a href="https://vinicius.zanvexis.com/">
     <img src="https://img.shields.io/badge/🌐_Website-zanvexis.com-ff8800?style=for-the-badge" />
   </a>
   <a href="https://vinicius-developer.vercel.app/">
