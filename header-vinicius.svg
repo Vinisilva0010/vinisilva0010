@@ -1,70 +1,90 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
-    </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="wobble">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G" />
     </filter>
+
+    <filter id="grime">
+        <feTurbulence type="turbulence" baseFrequency="0.5" numOctaves="2" result="turbulence"/>
+        <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.2 0" result="displaced"/>
+        <feMerge>
+            <feMergeNode in="SourceGraphic"/>
+            <feMergeNode in="displaced"/>
+        </feMerge>
+    </filter>
+
+    <linearGradient id="gradCrazy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF00FF;stop-opacity:1" /> <stop offset="50%" style="stop-color:#FFFF00;stop-opacity:1" /> <stop offset="100%" style="stop-color:#00FF00;stop-opacity:1" /> </linearGradient>
   </defs>
 
   <style>
-    .text { font-family: 'Courier New', monospace; fill: white; text-anchor: middle; }
-    .title { font-size: 40px; font-weight: bold; letter-spacing: 2px; }
-    .subtitle { font-size: 18px; fill: #00ff99; letter-spacing: 1px; }
-    .highlight { fill: #ff8800; font-weight: bold; }
-    
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.8; transform: scale(1.02); }
-    }
-    .pulsing { animation: pulse 3s infinite; transform-origin: center; }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-    .floating-1 { animation: float 4s infinite ease-in-out; }
-    .floating-2 { animation: float 4s infinite ease-in-out 1s; }
-    .floating-3 { animation: float 4s infinite ease-in-out 2s; }
+    /* Fontes genéricas, mas o filtro fará elas parecerem desenhadas */
+    .text { font-family: 'Comic Sans MS', 'Arial Black', cursive; font-weight: bold; text-anchor: middle; filter: url(#wobble); }
+    .title { font-size: 50px; fill: #00FFFF; stroke: #000; stroke-width: 3px; paint-order: stroke; }
+    .highlight { fill: #FF3300; }
+    .subtitle { font-size: 22px; fill: #000; font-weight: bold; letter-spacing: -1px; transform: rotate(-2deg); }
 
-    /* Caixas dos Sistemas */
-    .box-rect { fill: rgba(255,255,255,0.03); stroke-width: 2; }
-    .box-title { font-size: 14px; font-weight: bold; fill: white; text-anchor: middle; }
-    .box-sub { font-size: 10px; fill: #aaa; text-anchor: middle; }
-    .icon { font-size: 20px; }
+    /* ANIMAÇÃO NERVOZA (Jitter) em vez de flutuar suave */
+    @keyframes jitter {
+      0% { transform: translate(0,0) rotate(0deg); }
+      25% { transform: translate(-3px, 2px) rotate(-1deg); }
+      50% { transform: translate(2px, -3px) rotate(1deg); }
+      75% { transform: translate(-2px, -2px) rotate(0deg); }
+      100% { transform: translate(0,0) rotate(0deg); }
+    }
+    .jittery { animation: jitter 0.2s infinite steps(2); transform-origin: center; }
+
+    @keyframes pulse-manic {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1) rotate(3deg); }
+    }
+    .pulsing-manic { animation: pulse-manic 0.5s infinite alternate ease-in-out; transform-origin: center; }
+
+    /* Estilo das "Caixas" que agora são bolhas disformes */
+    .blob-path { stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; filter: url(#wobble); }
+    .box-title { font-size: 18px; font-weight: 900; fill: #000; text-anchor: middle; font-family: sans-serif; }
+    .box-sub { font-size: 12px; fill: #333; text-anchor: middle; font-weight: bold; }
   </style>
 
-  <rect width="100%" height="100%" fill="url(#grad1)" rx="15" />
-  <rect width="100%" height="100%" fill="none" stroke="#333" stroke-width="4" rx="15" />
+  <rect width="100%" height="100%" fill="url(#gradCrazy)" filter="url(#grime)" />
+  
+  <path d="M50,50 Q100,150 50,250 T50,450" stroke="#000" stroke-width="3" fill="none" opacity="0.2" filter="url(#wobble)"/>
+  <path d="M750,350 Q600,300 750,200 T750,50" stroke="#000" stroke-width="3" fill="none" opacity="0.2" filter="url(#wobble)"/>
 
-  <g class="pulsing">
-    <text x="400" y="80" class="text title">Hi, I'm <tspan class="highlight">Vinicius</tspan></text>
+  <g class="jittery" style="animation-delay: 0.1s;">
+    <text x="400" y="90" class="text title">HI, I'M <tspan class="highlight">VINICIUS</tspan>!</text>
   </g>
-  <text x="400" y="120" class="text subtitle">&gt; The Full-stack Architect &amp; Founder</text>
+  <text x="400" y="135" class="text subtitle">The Full-stack Architect & Founder (Chaos Edition)</text>
 
-  <g class="floating-1" transform="translate(0,0)">
-    <rect x="80" y="180" width="180" height="100" rx="10" class="box-rect" stroke="#ff3300" />
-    <text x="170" y="235" class="text box-title">RUST CORE</text>
-    <text x="170" y="255" class="text box-sub">Security &amp; DBs</text>
-  </g>
-
-  <g class="floating-2" transform="translate(0,0)">
-    <rect x="290" y="170" width="220" height="110" rx="10" class="box-rect" stroke="#ff8800" filter="url(#glow)" />
-    <text x="400" y="230" class="text box-title" style="font-size: 16px;">ZANVEXIS AI</text>
-    <text x="400" y="250" class="text box-sub">The Masterpiece</text>
-  </g>
-
-  <g class="floating-3" transform="translate(0,0)">
-    <rect x="540" y="180" width="180" height="100" rx="10" class="box-rect" stroke="#00ccff" />
-    <text x="630" y="235" class="text box-title">WEB3 &amp; UI</text>
-    <text x="630" y="255" class="text box-sub">DeFi &amp; Animations</text>
+  <g class="jittery" transform="translate(80,180)">
+    <path class="blob-path" d="M20,10 Q50,-20 150,10 Q190,50 160,90 Q100,120 20,90 Q-10,50 20,10 Z" fill="#FF3300" stroke="#660000" />
+    <circle cx="60" cy="40" r="15" fill="#FFF" stroke="#000" stroke-width="3"/>
+    <circle cx="60" cy="40" r="5" fill="#000"/>
+    <circle cx="120" cy="45" r="12" fill="#FFF" stroke="#000" stroke-width="3"/>
+    <circle cx="120" cy="45" r="4" fill="#000"/>
+    <text x="90" y="75" class="box-title">RUST CORE</text>
+    <text x="90" y="95" class="box-sub">Security & DBs</text>
   </g>
 
-  <text x="400" y="360" class="text" style="font-size: 12px; letter-spacing: 4px; fill: #ff8800; opacity: 0.8;">BUILDING THE FUTURE OS</text>
+  <g class="pulsing-manic" transform="translate(290,160)">
+    <path class="blob-path" d="M30,20 Q110,-30 190,20 Q240,80 190,130 Q110,160 30,130 Q-20,80 30,20 Z" fill="#FFFF00" stroke="#000" stroke-width="7" />
+    
+    <path d="M50,80 Q110,140 170,80" fill="none" stroke="#000" stroke-width="8" stroke-linecap="round" filter="url(#wobble)"/>
+    <path d="M60,85 L65,105 M85,95 L90,115 M110,100 L115,120 M135,95 L140,115 M160,85 L165,105" stroke="#000" stroke-width="4" filter="url(#wobble)"/>
+
+    <text x="110" y="55" class="box-title" style="font-size: 20px; fill:#FF00FF; stroke:#000; stroke-width:1px;">ZANVEXIS AI</text>
+    <text x="110" y="145" class="box-sub" style="font-weight:900; font-size: 14px;">THE MASTERPIECE</text>
+  </g>
+
+  <g class="jittery" transform="translate(540,180)" style="animation-delay: 0.3s;">
+    <path class="blob-path" d="M30,0 Q130,-10 160,40 Q180,100 130,110 Q50,140 10,100 Q-20,40 30,0 Z" fill="#00CCFF" stroke="#0000FF" />
+     <path d="M50,30 Q90,20 130,40 Q120,80 90,70 Q60,90 50,30" fill="#FFF" stroke="#000" stroke-width="3" />
+    <circle cx="90" cy="50" r="10" fill="#000"/>
+
+    <text x="90" y="85" class="box-title">WEB3 & UI</text>
+    <text x="90" y="105" class="box-sub">DeFi & Chains</text>
+  </g>
+
+  <text x="400" y="370" class="text" style="font-size: 16px; fill: #000; font-weight: 900; transform: rotate(1deg);">BUILDING THE FUTURE OS (OR DESTROYING IT)</text>
 </svg>
