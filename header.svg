@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#E5FF00" />
+  
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#000" stroke-width="1" stroke-opacity="0.15"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <g transform="translate(-50, 50) rotate(-4)">
+    <rect width="900" height="45" fill="#FF00FF" stroke="#000" stroke-width="5" />
+    <text x="450" y="32" font-family="Courier New, monospace" font-size="22" font-weight="900" fill="#000" text-anchor="middle" letter-spacing="6">
+      CAOS CONTROLADO // ALTA PERFORMANCE // CAOS CONTROLADO
+    </text>
+  </g>
+
+  <g transform="translate(50, 110)">
+    <rect x="12" y="12" width="700" height="140" fill="#000" />
+    <rect x="0" y="0" width="700" height="140" fill="#FFF" stroke="#000" stroke-width="6" />
+    
+    <text x="350" y="60" font-family="Arial Black, Impact, sans-serif" font-size="45" font-weight="900" fill="#000" text-anchor="middle" letter-spacing="-1">
+      VINICIUS PONTUAL
+    </text>
+    <text x="350" y="90" font-family="Courier New, monospace" font-size="18" font-weight="bold" fill="#FF3300" text-anchor="middle">
+      &gt; RUST_ARCHITECT &amp; FOUNDER @ ZANVEXIS
+    </text>
+    
+    <g transform="translate(130, 110)">
+      <rect x="0" y="0" width="120" height="30" fill="#00FFFF" stroke="#000" stroke-width="3"/>
+      <text x="60" y="20" font-family="Arial Black, sans-serif" font-size="12" fill="#000" text-anchor="middle">WEB3 DEFI</text>
+    </g>
+    <g transform="translate(290, 110)">
+      <rect x="0" y="0" width="120" height="30" fill="#FF00FF" stroke="#000" stroke-width="3"/>
+      <text x="60" y="20" font-family="Arial Black, sans-serif" font-size="12" fill="#000" text-anchor="middle">NEXT.JS 14</text>
+    </g>
+    <g transform="translate(450, 110)">
+      <rect x="0" y="0" width="120" height="30" fill="#CCFF00" stroke="#000" stroke-width="3"/>
+      <text x="60" y="20" font-family="Arial Black, sans-serif" font-size="12" fill="#000" text-anchor="middle">SMART CONTRACTS</text>
+    </g>
+  </g>
+
+  <g transform="translate(700, 50)">
+    <circle cx="0" cy="0" r="25" fill="#00FFFF" stroke="#000" stroke-width="5" />
+    <path d="M-12,-12 L12,12 M12,-12 L-12,12" stroke="#000" stroke-width="5" />
+  </g>
+  
+  <g transform="translate(50, 275)">
+    <rect x="8" y="8" width="700" height="50" fill="#000" />
+    <rect x="0" y="0" width="700" height="50" fill="#FF3300" stroke="#000" stroke-width="5" />
+    <text x="350" y="33" font-family="Arial Black, sans-serif" font-size="20" font-weight="900" fill="#FFF" text-anchor="middle" letter-spacing="2">
+      BUILDING THE ZANVEXIS AI ECOSYSTEM
+    </text>
+  </g>
+</svg>
