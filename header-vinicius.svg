@@ -1,90 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
-  <defs>
-    <filter id="wobble">
-      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G" />
-    </filter>
-
-    <filter id="grime">
-        <feTurbulence type="turbulence" baseFrequency="0.5" numOctaves="2" result="turbulence"/>
-        <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0.2 0" result="displaced"/>
-        <feMerge>
-            <feMergeNode in="SourceGraphic"/>
-            <feMergeNode in="displaced"/>
-        </feMerge>
-    </filter>
-
-    <linearGradient id="gradCrazy" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FF00FF;stop-opacity:1" /> <stop offset="50%" style="stop-color:#FFFF00;stop-opacity:1" /> <stop offset="100%" style="stop-color:#00FF00;stop-opacity:1" /> </linearGradient>
-  </defs>
-
-  <style>
-    /* Fontes genéricas, mas o filtro fará elas parecerem desenhadas */
-    .text { font-family: 'Comic Sans MS', 'Arial Black', cursive; font-weight: bold; text-anchor: middle; filter: url(#wobble); }
-    .title { font-size: 50px; fill: #00FFFF; stroke: #000; stroke-width: 3px; paint-order: stroke; }
-    .highlight { fill: #FF3300; }
-    .subtitle { font-size: 22px; fill: #000; font-weight: bold; letter-spacing: -1px; transform: rotate(-2deg); }
-
-    /* ANIMAÇÃO NERVOZA (Jitter) em vez de flutuar suave */
-    @keyframes jitter {
-      0% { transform: translate(0,0) rotate(0deg); }
-      25% { transform: translate(-3px, 2px) rotate(-1deg); }
-      50% { transform: translate(2px, -3px) rotate(1deg); }
-      75% { transform: translate(-2px, -2px) rotate(0deg); }
-      100% { transform: translate(0,0) rotate(0deg); }
-    }
-    .jittery { animation: jitter 0.2s infinite steps(2); transform-origin: center; }
-
-    @keyframes pulse-manic {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1) rotate(3deg); }
-    }
-    .pulsing-manic { animation: pulse-manic 0.5s infinite alternate ease-in-out; transform-origin: center; }
-
-    /* Estilo das "Caixas" que agora são bolhas disformes */
-    .blob-path { stroke-width: 5; stroke-linejoin: round; stroke-linecap: round; filter: url(#wobble); }
-    .box-title { font-size: 18px; font-weight: 900; fill: #000; text-anchor: middle; font-family: sans-serif; }
-    .box-sub { font-size: 12px; fill: #333; text-anchor: middle; font-weight: bold; }
-  </style>
-
-  <rect width="100%" height="100%" fill="url(#gradCrazy)" filter="url(#grime)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#111111" />
   
-  <path d="M50,50 Q100,150 50,250 T50,450" stroke="#000" stroke-width="3" fill="none" opacity="0.2" filter="url(#wobble)"/>
-  <path d="M750,350 Q600,300 750,200 T750,50" stroke="#000" stroke-width="3" fill="none" opacity="0.2" filter="url(#wobble)"/>
+  <path d="M0,0 L800,0 L800,25 L500,10 L200,30 L0,15 Z" fill="#FF00FF"/>
+  <path d="M0,380 L300,390 L600,370 L800,385 L800,400 L0,400 Z" fill="#00FF00"/>
 
-  <g class="jittery" style="animation-delay: 0.1s;">
-    <text x="400" y="90" class="text title">HI, I'M <tspan class="highlight">VINICIUS</tspan>!</text>
+  <g transform="translate(400, 90) rotate(-2)">
+    <text text-anchor="middle" font-family="Arial Black, Impact, sans-serif" font-size="50" font-weight="900" fill="#00FFFF" stroke="#000" stroke-width="4">
+      HI, I'M <tspan fill="#FF3300">VINICIUS</tspan>
+    </text>
   </g>
-  <text x="400" y="135" class="text subtitle">The Full-stack Architect & Founder (Chaos Edition)</text>
-
-  <g class="jittery" transform="translate(80,180)">
-    <path class="blob-path" d="M20,10 Q50,-20 150,10 Q190,50 160,90 Q100,120 20,90 Q-10,50 20,10 Z" fill="#FF3300" stroke="#660000" />
-    <circle cx="60" cy="40" r="15" fill="#FFF" stroke="#000" stroke-width="3"/>
-    <circle cx="60" cy="40" r="5" fill="#000"/>
-    <circle cx="120" cy="45" r="12" fill="#FFF" stroke="#000" stroke-width="3"/>
-    <circle cx="120" cy="45" r="4" fill="#000"/>
-    <text x="90" y="75" class="box-title">RUST CORE</text>
-    <text x="90" y="95" class="box-sub">Security & DBs</text>
+  <g transform="translate(400, 135) rotate(1)">
+    <text text-anchor="middle" font-family="Courier New, monospace" font-size="20" font-weight="bold" fill="#FFFFFF">
+      &gt; The Full-stack Architect &amp; Founder (Chaos Edition)
+    </text>
   </g>
 
-  <g class="pulsing-manic" transform="translate(290,160)">
-    <path class="blob-path" d="M30,20 Q110,-30 190,20 Q240,80 190,130 Q110,160 30,130 Q-20,80 30,20 Z" fill="#FFFF00" stroke="#000" stroke-width="7" />
-    
-    <path d="M50,80 Q110,140 170,80" fill="none" stroke="#000" stroke-width="8" stroke-linecap="round" filter="url(#wobble)"/>
-    <path d="M60,85 L65,105 M85,95 L90,115 M110,100 L115,120 M135,95 L140,115 M160,85 L165,105" stroke="#000" stroke-width="4" filter="url(#wobble)"/>
-
-    <text x="110" y="55" class="box-title" style="font-size: 20px; fill:#FF00FF; stroke:#000; stroke-width:1px;">ZANVEXIS AI</text>
-    <text x="110" y="145" class="box-sub" style="font-weight:900; font-size: 14px;">THE MASTERPIECE</text>
+  <g transform="translate(80, 170)">
+    <path d="M20,20 Q60,-20 120,10 T160,80 Q130,140 80,120 T10,80 Z" fill="#FF3300" stroke="#000" stroke-width="6"/>
+    <circle cx="55" cy="45" r="18" fill="#FFF" stroke="#000" stroke-width="4"/>
+    <circle cx="55" cy="45" r="5" fill="#000"/>
+    <circle cx="105" cy="35" r="12" fill="#FFF" stroke="#000" stroke-width="4"/>
+    <circle cx="103" cy="37" r="3" fill="#000"/>
+    <text x="85" y="95" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="16" fill="#FFF" stroke="#000" stroke-width="1.5">RUST CORE</text>
+    <text x="85" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#000">Security &amp; DBs</text>
   </g>
 
-  <g class="jittery" transform="translate(540,180)" style="animation-delay: 0.3s;">
-    <path class="blob-path" d="M30,0 Q130,-10 160,40 Q180,100 130,110 Q50,140 10,100 Q-20,40 30,0 Z" fill="#00CCFF" stroke="#0000FF" />
-     <path d="M50,30 Q90,20 130,40 Q120,80 90,70 Q60,90 50,30" fill="#FFF" stroke="#000" stroke-width="3" />
-    <circle cx="90" cy="50" r="10" fill="#000"/>
-
-    <text x="90" y="85" class="box-title">WEB3 & UI</text>
-    <text x="90" y="105" class="box-sub">DeFi & Chains</text>
+  <g transform="translate(290, 150)">
+    <path d="M30,30 Q110,-20 180,20 T210,100 Q180,180 100,160 T10,100 Z" fill="#FFFF00" stroke="#000" stroke-width="8"/>
+    <path d="M50,85 Q110,150 170,80" fill="none" stroke="#000" stroke-width="8" stroke-linecap="round"/>
+    <line x1="70" y1="90" x2="65" y2="115" stroke="#000" stroke-width="4"/>
+    <line x1="110" y1="102" x2="110" y2="125" stroke="#000" stroke-width="4"/>
+    <line x1="150" y1="88" x2="155" y2="110" stroke="#000" stroke-width="4"/>
+    <text x="110" y="55" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="22" fill="#FF00FF" stroke="#000" stroke-width="2">ZANVEXIS AI</text>
+    <text x="110" y="145" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="13" fill="#000">THE MASTERPIECE</text>
   </g>
 
-  <text x="400" y="370" class="text" style="font-size: 16px; fill: #000; font-weight: 900; transform: rotate(1deg);">BUILDING THE FUTURE OS (OR DESTROYING IT)</text>
+  <g transform="translate(540, 180)">
+    <path d="M20,10 Q80,-20 140,20 T160,80 Q140,140 70,120 T10,70 Z" fill="#00CCFF" stroke="#000" stroke-width="6"/>
+    <path d="M40,40 Q80,20 120,40 Q100,90 80,80 Q60,90 40,40 Z" fill="#FFF" stroke="#000" stroke-width="4"/>
+    <circle cx="80" cy="55" r="7" fill="#000"/>
+    <text x="80" y="100" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="16" fill="#000">WEB3 &amp; UI</text>
+    <text x="80" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#000">DeFi &amp; Chains</text>
+  </g>
+
+  <g transform="translate(400, 360) rotate(1)">
+    <text text-anchor="middle" font-family="Arial Black, sans-serif" font-size="14" fill="#FF8800" letter-spacing="2">BUILDING THE FUTURE OS (OR DESTROYING IT)</text>
+  </g>
 </svg>
