@@ -1,86 +1,76 @@
 <div align="center">
-  <img src="./header-vinicius.svg" width="800" alt="Vinicius Animated Header" />
 
-  <br/>
-  <br/>
+  <img src="./banner-brutal.png" width="100%" alt="Vinicius Pontual - Chaos & Code" />
 
-  <h1> 🚀 Arquiteto de Software & Founder 🚀 </h1>
-  <h3>Especialista em Rust, Blockchain e Interfaces de Alta Performance.</h3>
+  <br/><br/>
 
-  <p>
-    Não apenas escrevo código; eu construo ecossistemas digitais seguros, rápidos e visualmente impactantes. Minha paixão é unir a robustez do baixo nível com a beleza de interfaces "super sites".
+  <h1>⚠️ VINICIUS PONTUAL ⚠️</h1>
+  
+  <h3>ARQUITETO DE SOFTWARE • FOUNDER ZANVEXIS • CAOS CONTROLADO</h3>
+
+  <p align="center">
+    <b>Eu não escrevo código fofo. Eu construo máquinas de guerra digitais.</b><br>
+    Unindo a brutalidade e segurança do baixo nível (Rust/Web3) com interfaces <i>"Super Sites"</i> que derretem cérebros (e não a GPU).
   </p>
 
+  <br/>
+
   <a href="https://vinicius.zanvexis.com/">
-    <img src="https://img.shields.io/badge/PORTFÓLIO-VISITAR-ff8800?style=for-the-badge&logo=framer" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/PORTFÓLIO-ACESSO_RESTRITO-FFFF00?style=for-the-badge&logoColor=black&labelColor=000000" alt="Portfolio" />
   </a>
   <a href="https://www.zanvexis.com">
-    <img src="https://img.shields.io/badge/PROJETO_ATUAL-ZANVEXIS_AI-00ff99?style=for-the-badge&logo=openai" alt="Zanvexis" />
+    <img src="https://img.shields.io/badge/ZANVEXIS-SISTEMA_OPERANTE-00FFFF?style=for-the-badge&logoColor=black&labelColor=000000" alt="Zanvexis" />
   </a>
+
 </div>
+
+<br/>
+
+> **ESTADO ATUAL:** Focando 100% no desenvolvimento de agentes de IA de alta frequência e contratos inteligentes blindados para a **Zanvexis**.
 
 ---
 
-### ⚡ O Que Eu Faço (The Core Stack)
+## ⚡ ARSENAL TÉCNICO (The Core Stack)
 
 <div align="center">
-
-#### 🛡️ RUST & SEGURANÇA EXTREMA
-*Desenvolvimento de sistemas onde a falha não é uma opção.*
-<br/>
-<img src="https://img.shields.io/badge/Rust-Backend_&_Systems-b7410e?style=flat-square&logo=rust" />
-<img src="https://img.shields.io/badge/Security-Blockchain_Core-blue?style=flat-square&logo=security" />
-<img src="https://img.shields.io/badge/Database-Innovation-336791?style=flat-square&logo=postgresql" />
-<p align="left">
-Minha especialidade é criar a infraestrutura invisível e inquebrável. Utilizo <b>Rust</b> para construir backends de altíssima performance, inovações em arquitetura de banco de dados e camadas de segurança para blockchain. Se precisa ser rápido e seguro, eu construo em Rust.
-</p>
-
-#### ⛓️ WEB3, DEFI & CRYPTO GAMES
-*Construindo a próxima geração da internet descentralizada.*
-<br/>
-<img src="https://img.shields.io/badge/Web3-dApps-F16822?style=flat-square&logo=web3.js" />
-<img src="https://img.shields.io/badge/Smart_Contracts-Solidity_&_Ink!-363636?style=flat-square&logo=ethereum" />
-<img src="https://img.shields.io/badge/Crypto_Gaming-P2E_Mechanics-purple?style=flat-square&logo=gamepad" />
-<p align="left">
-Desenvolvo o futuro das finanças e do entretenimento. Tenho vasta experiência na criação de protocolos <b>DeFi</b>, jogos interativos baseados em cripto (Web & dApps) e smart contracts seguros.
-</p>
-
-#### 🎨 "SUPER SITES" & INTERFACES ANIMADAS
-*Quando a performance encontra a arte visual.*
-<br/>
-<img src="https://img.shields.io/badge/Frontend-Next.js_14-black?style=flat-square&logo=next.js" />
-<img src="https://img.shields.io/badge/Animations-Framer_Motion_&_GSAP-0055FF?style=flat-square&logo=framer" />
-<img src="https://img.shields.io/badge/UI/UX-High_Impact-ff69b4?style=flat-square&logo=figma" />
-<p align="left">
-Eu não crio apenas sites; crio experiências. Meus "super sites" combinam a velocidade do Next.js com animações fluidas (Framer Motion/GSAP) que prendem a atenção do usuário, sem sacrificar a performance.
-</p>
-
+  <img src="https://skillicons.dev/icons?i=rust,wasm,solidity,ts,nextjs,react,tailwind,threejs,nodejs,python,postgres,redis,docker,aws,polkadot&theme=dark" />
 </div>
+
+<br/>
+
+### 🛡️ RUST & INFRAESTRUTURA BRUTA
+Esqueça sistemas que caem no final de semana. Minha especialidade é arquitetura invisível e inquebrável. Utilizo **Rust** para construir backends de performance extrema, segurança em nível bancário e sistemas onde a falha simplesmente não é uma opção.
+<br/>
+<img src="https://img.shields.io/badge/Rust-Backend_&_Systems-FF4500?style=flat-square&logo=rust&logoColor=white" /> <img src="https://img.shields.io/badge/Security-Blockchain_Core-000000?style=flat-square&logo=security&logoColor=white" /> 
+
+### ⛓️ WEB3, DEFI & O SUBMUNDO CRYPTO
+Desenvolvendo a próxima geração da internet sem amarras. Vasta experiência na criação de protocolos **DeFi**, mecânicas P2E para Web Games e Smart Contracts auditáveis (Solidity & Ink!). Se envolve descentralização e dinheiro, eu codo.
+<br/>
+<img src="https://img.shields.io/badge/Web3-dApps_&_Nodes-8A2BE2?style=flat-square&logo=web3.js&logoColor=white" /> <img src="https://img.shields.io/badge/Smart_Contracts-EVM_&_WASM-000000?style=flat-square&logo=ethereum&logoColor=white" />
+
+### 🎨 FRONT-END: "SUPER SITES" & CAOS VISUAL
+O mercado está cheio de templates chatos e minimalistas. Eu não crio sites, eu crio interrupções de padrão. Velocidade insana do **Next.js 14** combinada com animações pesadas (Framer Motion, 3D) e UI Neo-Brutalista. A performance encontra a arte bizarra.
+<br/>
+<img src="https://img.shields.io/badge/Frontend-Next.js_14-00FFFF?style=flat-square&logo=next.js&logoColor=black" /> <img src="https://img.shields.io/badge/Animations-Framer_&_3D-FF1493?style=flat-square&logo=framer&logoColor=white" />
 
 ---
 
-### 🧠 Minha Obra-Prima Atual: [ZANVEXIS](https://www.zanvexis.com)
+## 🧠 OBRA-PRIMA: ZANVEXIS AI
 
-Estou consolidando todo o meu conhecimento para construir o **Zanvexis** — Um Sistema Operacional de IA projetado para substituir ferramentas SaaS fragmentadas para fundadores.
+Não é apenas uma empresa; é um ecossistema. O **Zanvexis** é um Sistema Operacional de IA construído para aniquilar ferramentas SaaS fragmentadas. 
 
-> É onde Agentes de IA (Marketing, Jurídico, Financeiro) trabalham juntos em um workspace unificado, com um núcleo migrando para **Rust** para segurança descentralizada.
-
----
-
-### 🛠️ Tech Stack Arsenal
-
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=rust,wasm,solidity,ts,nextjs,react,tailwind,threejs,nodejs,python,postgres,redis,docker,aws,polkadot" />
-</div>
+* 🤖 **Agentes Autônomos:** Marketing, Jurídico e Financeiro trabalhando no background.
+* ⚙️ **Núcleo em Rust:** Porque velocidade e segurança descentralizada são inegociáveis.
+* 🌐 **[Entre na Máquina](https://www.zanvexis.com)**
 
 ---
 
 <div align="center">
-  ### 📫 Vamos Conectar
-  <a href="https://vinicius.zanvexis.com/">
-    <img src="https://img.shields.io/badge/🌐_Website-zanvexis.com-ff8800?style=for-the-badge" />
+  <h3>📫 RADAR DE CONTATO</h3>
+  <a href="https://wa.me/5511991952333">
+    <img src="https://img.shields.io/badge/WHATSAPP-SINAL_DIRETO-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
   </a>
-  <a href="https://vinicius-developer.vercel.app/">
-    <img src="https://img.shields.io/badge/💼_Portfólio-Ver_Projetos-0077b5?style=for-the-badge" />
+  <a href="https://linkedin.com/company/zanvexis">
+    <img src="https://img.shields.io/badge/LINKEDIN-CONEXÃO_PROFISSIONAL-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </div>
