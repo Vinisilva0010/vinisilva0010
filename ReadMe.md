@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./header-vinicius.svg" width="100%" alt="Vinicius Pontual Header" />
+  <img src="./header.svg" width="100%" alt="Vinicius Pontual Header" />
 
   <br/>
   <br/>
